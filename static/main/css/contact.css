@@ -1,0 +1,76 @@
+.contact {
+    margin: 5%;
+    position: relative;
+    display: block;
+    background-color: #0f0f0f;
+}
+
+.contact label {
+    position: relative;
+    display: block;
+    color: white;
+    font-style: italic;
+    font-family: Arial;
+    font-size: 16pt;
+    margin-left: 15px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+label.required {
+    position: relative;
+    display: block;
+    color: white;
+    font-style: italic;
+    font-family: Arial;
+    font-size: 16pt;
+    margin-left: 15px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+label.required:after {
+    color: red;
+    content: " *";
+}
+
+.contact input {
+    position: relative;
+    display: block;
+    background-color: lightgrey;
+    font-size: 14pt;
+    margin-left: 15px;
+    font-family: "DejaVu Sans Mono";
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.contact textarea {
+    position: relative;
+    display: block;
+    width: 90%;
+    font-size: 14pt;
+    margin: 7px 15px;
+    min-height: 200px;
+}
+
+.g-recaptcha {
+    position: relative;
+    display: block;
+    font-size: 14pt;
+    margin-left: 15px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+input.submit {
+    font-family: "DejaVu Sans Mono";
+    font-size: 18pt;
+    position: relative;
+    display: block;
+    margin-left: 15px;
+    margin-top: 7px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #4cae4c;
+}

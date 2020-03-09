@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title  %}
+    {%  load staticfiles %}
+    <link href="{% static "/main/css/contact.css"%}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-2 col-sm-0 col-xs-0"></div>
+            <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                <form class="contact">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" placeholder="Ваше имя">
+                    <label class="required">Email для ответа</label>
+                    <input type="email" placeholder="example@gmail.com" required>
+                    <label class="required">Ваше письмо</label>
+                    <textarea required></textarea>
+                    <div class="g-recaptcha" data-theme="dark" data-sitekey="6Ldoyn8UAAAAAE1Kg56p-4QHge6PS3-aFImkFWDa"></div>
+                    <input type="submit" class="submit" value="Отправить">
+                </form>
+            </div>
+            <div class="col-lg-3 col-md-2 col-sm-0 col-xs-0"></div>
+        </div>
+    </div>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+{% endblock %}

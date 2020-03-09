@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {% load staticfiles %}
+<link href="{% static "main/bootstrap/css/bootstrap-theme.min.css"%}" rel="stylesheet">
+<link href="{% static "main/css/main_page_text.css"%}" rel="stylesheet">
+<link href="{% static "main/css/tooltip.css"%}" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <style>
+
+        #mapid {
+            min-height: 1000px;
+            height: 100%;
+        }
+
+    </style>
+{% endblock %}
+{% block content %}
+    <div id="tooltip" class="container">
+    </div>
+<div id="mapid" class="container col-sm-12 col-xs-12 col-md-12 col-lg-12 "></div>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+<script src="{% static "/main/js/map.js"%}">
+</script>
+
+{% endblock %}

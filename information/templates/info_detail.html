@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row" id="rel" style="min-height: 100%">
+    <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3 container">
+         {% for history in info_item.history.all %}
+            <div class="container-fluid">
+            <div class="row">
+            <p>
+                {{ history.title }}
+            </p>
+            <p><a href="/media/{{ history.file }}"download> Скачать презентацию</a>
+                {% if history.view_file %}
+                <a href="/media/{{ history.view_file }}" target="_blank">открыть
+                <img class="center-block" src="/media/ppt.png" width="50" height="60"/></a>
+                {% endif %}
+                </p>
+            </div>
+            </div>
+        {% endfor %}
+        <hr style="color: #0f0f0f" />
+        {% for units in info_item.units.all %}
+            <div class="container-fluid">
+            <div class="row">
+            <p>
+                {{ units.title }}
+            </p>
+            <p><a href="/media/{{ units.file }}"download> Скачать презентацию</a>
+                {% if units.view_file %}
+                <a href="/media/{{ units.view_file }}" target="_blank">открыть
+                <img class="center-block" src="/media/ppt.png" width="50" height="60"/></a>
+                {% endif %}
+                </p>
+            </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="container col-sm-12 col-xs-12 col-md-6 col-lg-6">
+            <div class="row center-block">
+                <h1>{{ info_item.title }}</h1>
+            </div>
+        <img class="img-responsive" src ="/media/{{ info_item.image }}" height="100%" width="100%">
+    </div>
+    <div class="container col-sm-12 col-xs-12 col-md-3 col-lg-3 ">
+        {% for task in info_item.task.all %}
+            <div class="container-fluid">
+            <div class="row">
+            <p>
+                {{ task.title }}
+            </p>
+            <p><a href="/media/{{ task.file }}" download> Скачать презентацию</a>
+                {% if task.view_file %}
+                <a href="/media/{{ task.view_file }}" target="_blank">открыть
+                <img class="center-block" src="/media/ppt.png" width="50" height="60"/></a>
+                {% endif %}
+                </p>
+            </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

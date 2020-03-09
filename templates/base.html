@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load staticfiles %}
+<link href="{% static "/main/css/main_page_text.css"%}" rel="stylesheet">
+    {% block title %} {% endblock %}
+</head>
+<body>
+    <nav class="navbar" style="background-color: #0f0f0f">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/" style="color: white">Математический  путеводитель по  страницам
+                                                                истории и культуры Санкт-Петербурга</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/map" style="color: white">Карта</a></li>
+                        <li><a href="/people/" style="color: white">Организаторы</a></li>
+                        <li><a href="/task/" style="color: white">Квест</a></li>
+                        <li><a href="/contact/" style="color: white">Обратная связь</a></li>
+                        <li><a href="/source/" style="color: white">Откуда была взята информация</a></li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+</body>
+</html>

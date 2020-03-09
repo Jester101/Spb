@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}
+        {% load staticfiles %}
+{% endblock %}
+{% block content %}
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-0 col-xs-0 col-md-2 col-lg-2"></div>
+    <div id="form" class="col-xs-12 col-sm-12 col-md-8 col-lg-8"  style="background-color: #101010">
+        <form class="form-horizontal">
+        <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p style="color: white">
+                Цель: Узнать о каком объекте идет речь, посетить его и найти ответ на контрольный вопрос
+            </p>
+        </div>
+        </div>
+        <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="max-height: 50px">
+             <div class="collapse"><h3 id="place_id" style="color: white"></h3></div>
+             <div class="collapse"><h3 id="task_id" style="color: white"></h3></div>
+         </div>
+        </div>
+        <div class="row">
+        <div class="container-fluid" id="task" style="word-wrap: break-word; color: white;font-size: 16pt;
+        white-space: pre-wrap">
+        </div>
+        </div>
+        <div class="row" style="word-wrap: break-word; color: white;font-size: 14pt ">
+            <div class="container-fluid">
+           <button type="button" class="btn btn-primary">Подсказка</button>
+            <div class="collapse" id="hide">
+            </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="container-fluid" id="question" style="word-wrap: break-word; color: white;font-size: 16pt ">
+            {{ task.question }}
+        </div>
+        </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+            <label class="control-label" style="color: white">
+                Введите ваш вариант ответа</label>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <input id="answer" value="" type="text" style="color: #0f0f0f">
+                </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <button type="button" class="btn btn-success ">Ответить</button>
+            </div>
+            </div>
+    </form>
+    </div>
+    <div class="container col-sm-0 col-xs-0 col-md-2 col-lg-2"></div>
+    </div>
+    </div>
+    <script src="{% static "/main/js/task.js" %}"></script>
+{% endblock %}
